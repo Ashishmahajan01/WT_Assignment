@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <script>
+        let arr=["red","yellow", "orange", "green", "blue", "purple",
+                    "pink", "brown", "black", "gray", "white"]
+        function search(){
+            let num=document.getElementById("d1").value
+            console.log(arr.indexOf(num))
+            if(arr.indexOf(num)<0){
+                document.getElementById("p1").innerHTML=`<h1>Enter Data Is not Present in Array</h1>`
+            }
+            else{
+                document.getElementById("p1").innerHTML=`<h1>Enter Data Is Present in Array</h1>`
+            }
+        }
+        function AddToEnd(){
+            let num =document.getElementById( "d1").value
+            arr.push(num)
+            document.getElementById("p1").innerHTML=`<h4>${arr}</h4>`
+
+        }
+        function insert(){
+            let num =document.getElementById( "d1").value
+            let indx =document.getElementById( "d2").value
+            arr.splice(indx,0,num)
+            document.getElementById("p1").innerHTML=`<h4>${arr}</h4>`
+            
+        }
+        function remove(){
+            let num =document.getElementById( "d1").value
+            let remove =document.getElementById( "d3").value
+            arr.splice(remove,1)
+            document.getElementById("p1").innerHTML=`<h4> ${arr}</h4>`
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <pre>
+
+        Data  <input type="text" id="d1" placeholder="Enter Text" ></input>      Insert-Position  <input type="text" id="d2" placeholder="Enter Index" ></input>  Remove-Element  <input type="text" id="d3" placeholder="Enter Index" ></input>
+        <br>
+        <button onclick="search()">Search</button>  <button onclick="AddToEnd()">Add-to-end</button>  <button onclick="insert()">Insert</button>  <button onclick ="remove()">Remove</button>
+    </pre>
+    <p id="p1"></p>
+</body>
+</html>

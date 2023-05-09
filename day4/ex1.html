@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            function handler(){
+                let cb = document.getElementById("c1")
+               // console.log(cb.checked)
+                if(cb.checked){
+                    document.getElementById("i1").readOnly=true
+                }
+                else{
+                    document.getElementById("i1").readOnly=false
+                }
+
+
+            }
+        </script>
+    </head>
+    <body>
+        <pre>
+            <center><input type="text" id="i1" />
+            <label for "c1" >Click Here</label>
+            <input type="checkbox" id="c1" onchange="handler()"/></center>
+        </pre>
+    </body>
+</html>

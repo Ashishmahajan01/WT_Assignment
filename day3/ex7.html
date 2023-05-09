@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <script>
+            function f1()
+            {
+            let n1= document.getElementId("num1")
+            let n2= document.getElementId("num2")
+
+            switch(document.getElementById("s1").value)
+                {
+                case "+" :
+                        let sum = parseInt(n1) + parseInt(n2)
+                        document.getElementById("p1").innerText = `${n1} + ${n2} = ${sum}`         
+                          break;
+                case "-" :
+                        let r = parseInt(n1) - parseInt(n2)
+                        document.getElementById("p1").innerText = `${n1} - ${n2} = ${r}`         
+                     break;
+                case "*" :
+                        let r1 = parseInt(n1) * parseInt(n2)
+                        document.getElementById("p1").innerText = `${n1} * ${n2} = ${r1}`         
+                     break;
+                 case "/" :
+                        let r2 = parseInt(n1) / parseInt(n2)
+                        document.getElementById("p1").innerText = `${n1} / ${n2} = ${r2}`         
+                          break;
+                case "%" :
+                        let r3 = parseInt(n1) % parseInt(n2)
+                        document.getElementById("p1").innerText = `${n1} % ${n2} = ${r3}`         
+                     break;
+                case "square" :
+                        let r4 = parseInt(n1) * parseInt(n1)
+                        document.getElementById("p1").innerText = `${n1} * ${n1} = ${r4}`         
+                     break;
+                }
+            }  
+        </script>
+
+    </head>
+    <body>
+        <pre>
+            <input type ="number" id="num1" value="0" />          <input type = "number" id ="num2" value="0" />
+            <select id="s1" onchange="f1()">
+                <option>Select Option</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+                <option value="square">square</option>
+            </select>
+            <p id="p1"> </p>
+        </pre>
+    </body>
+</html>

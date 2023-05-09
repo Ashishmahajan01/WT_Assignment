@@ -1,0 +1,39 @@
+<html>
+<script>
+    let arr=[]
+    function handler2()
+    {
+        let str ="TEXT -"
+        console.log("arr=",arr)
+        for(x of arr)
+        {
+            console.log("x=")
+            str=str.concat(x["pname"],",")
+        }
+        document.getElementById("p1").innerText = str
+    }
+    function handler1()
+    {
+        let element1 =document.getElementById("i1")
+        let name= element1["value"]
+        let element2 =document.getElementById("i2")
+        let age= element2["value"]
+
+        arr.push({pname:name,page:age})
+        console.log(arr)
+    }
+</script>
+
+<body>
+    <pre>
+    <label for="i1">Enter name :</label><input type="text" id="i1" />
+    <label for="i2">Enter age:</label><input type="number"  id="i2" />
+    <input type="button" onclick="handler1()" value="OK"/>
+    <input type="button" onclick="handler2()" value="show"/>
+    </pre>
+     <p id="p1">
+
+     </p>
+
+</body>
+</html>

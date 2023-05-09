@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Box Model</title>
+    <style>
+        * {
+            width: fit-content;
+        }
+
+        #i1 {
+            background-color: greenyellow;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-width: 5px;
+            border-style: outset;
+            padding: 5px;
+            display: block;
+        }
+
+        #i2 {
+            background-color: aquamarine;
+        }
+    </style>
+
+    <script>
+        function stylehandler() {
+            for (x in document.getElementById("i2").style)
+                console.log(x)
+            document.getElementById("i2").innerText = `${x}`
+
+
+            document.getElementById("i2").style.marginTop = "10px"
+
+        }
+    </script>
+</head>
+
+<body>
+    <div>hiiii i am Ashish</div>
+    <div id='i1' onclick="stylehandler()">Hii i am your father</div>
+    <div id='i2'>Hello</div>
+</body>
+
+</html>

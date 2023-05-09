@@ -1,0 +1,108 @@
+<html>
+
+<head>
+<script>
+     function f()
+	
+         {
+                let element = document.getElementById("p1")
+
+                let num= document.getElementById("i1").value
+				 let str1 = document.getElementById("s1").value
+                 let str2 = document.getElementById("s2").value
+                switch(str1)
+                {
+                case "dollar" :
+                        if(str2=="dollar")
+						{
+                          element.innerHTML=num.concat("&#36","=",num,"&#36")
+						}
+						  else if (str2=="Rupee"){
+						      element.innerHTML=num.concat("&#36","=",num*80,"&#8377")
+						  }  
+						  else if (str2=="euro"){
+						      element.innerHTML=num.concat("&#36","=",num*(80/90),"&#8364")
+						  }  
+						  
+                          break;
+				case "Rupee" :
+                        if(str2=="Rupee")
+						{
+                          element.innerHTML=num.concat("&#8377","=",num,"&#8377")
+						}
+						  else if (str2=="dollar"){
+						      element.innerHTML=num.concat("&#8377","=",num/80,"&#36")
+						  }  
+						  else if (str2=="euro"){
+						      element.innerHTML=num.concat("&#8377","=",num/90,"&#8364")
+						  }  
+						  
+                          break;
+				case "euro" :
+                        if(str2=="euro")
+						{
+                          element.innerHTML=num.concat("&#8364","=",num,"&#8364")
+						}
+						  else if (str2=="Rupee"){
+						      element.innerHTML=num.concat("&#8364","=",num*90,"&#8377")
+						  }  
+						  else if (str2=="dollar"){
+						      element.innerHTML=num.concat("&#8364","=",num*(90/80),"&#36")
+						  }  
+						  
+                          break;
+		  
+		                   }
+						   
+						 }  
+
+                      </script>
+					  
+					  </head>
+<body>
+          
+
+     <head>
+	       <title>currency convertor</title>   
+              
+	 </head>
+	 <br><br>
+	 <center>
+	    <table border="1" width="600px;" height="200" style="background-color:violet;">
+		<thead>
+		<td>
+	         <h1 align="center">currency_convertor</h1>
+	 <br><br>
+	
+	   <input type="text" id="i1" placeholder="enter Amount" >
+      <label>From:</label>                           
+	  
+	 
+      <select id="s1">
+	      <option> select</option>
+         <option value="dollar">dollar</option>
+         <option value="Rupee">Rupee</option>
+         <option value="euro">euro</option>
+      </select>
+       <label>To:</label> 
+      <select id="s2">
+	      <option> select</option>
+         <option value="Rupee">Rupee</option>
+         <option value="dollar">dollar</option>        
+         <option value="euro">euro</option>
+      </select>
+      <!-- <label>Amount:</label> -->
+       
+     
+      <p id="p1"></p>
+	  <button onclick="f()"> convert</button>
+	   <!-- <button type="button" id="convert">Convert</button> -->
+   
+   </td>
+    </thead>
+   </table>
+  
+     </center>
+
+</body>
+</html>

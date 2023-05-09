@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script> 
+    function handler(choice){
+        let n = document.getElementById("i1").value
+        let result
+        switch (choice)
+    {
+        case 'sq': result= n*n
+        break;
+
+        case 'cu' : result = n*n*n
+        break;
+         
+        case 'asis' : result = n 
+        break;
+
+
+    }
+     document.getElementById("p1").innerHTML=`<h> ${result} </h>`
+    
+    }
+    </script>
+
+   
+</head>
+<body>
+    <pre>
+        <input type="number" id="i1" \>
+        <label for ="r1" > Square</label> <input type ="radio" onclick="handler('sq')" name="maths" id="r1" value="sq" />
+        <label for ="r2" > Cube</label> <input type ="radio" onclick="handler('cu')" name="maths" id="r2" value="cu" />
+        <label for ="r3" > As-it-is</label> <input type ="radio" onclick="handler('asis')" name="maths" id="r3" value="asis" />
+    </pre>
+    <p  id="p1"></p>   
+</body>
+</html>
