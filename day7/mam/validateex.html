@@ -1,0 +1,45 @@
+<html>
+<script>
+function validateIt()
+{
+    let result,namev,agev
+    //get the value of first field using form
+
+    let v =document.forms["form1"]["sname"].value
+    //check if it is empty or length is less than 2 show a message
+    if(v.trim()=="" || v.length<2 || !isNaN(v) ){
+        alert("name cannot be empty or less than 2 chars")
+        document.forms["form1"]["sname"].focus()
+        namev=false
+    }
+    else
+    {
+        namev=true
+    }
+
+    //get the value of second field using form
+    let age = document.forms.form1.sage.value
+    //check if age is >=18 
+    if(age < 18){
+       agev=false
+       alert("age cannot be less than 18")
+       document.forms.form1.sage.focus()
+    }
+    else
+        agev=true
+    //return result 
+    return namev && agev
+}
+</script>
+<body>
+    <form name="form1" onsubmit="return validateIt()" action="../9-may/animate.html">
+        Name:<input type="text" name="sname"/>
+        Age :<input type="number" name="sage"/>
+        <input type="submit" value="submit" /> 
+    </form>
+    <form></form>
+
+
+
+</body>
+</html>

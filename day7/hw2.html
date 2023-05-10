@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HW 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#i1').click(function () {
+                let fac = $('#t1').val();
+                let result = 1
+                for (i = fac; i > 1; i--) {
+                    result = result * i;
+                    console.log(result)
+                }
+                $('#d1').text(result)
+
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <input type="number" id="t1" />
+    <button id="i1">Factorial</button>
+    <div id="d1"></div>
+</body>
+
+</html>

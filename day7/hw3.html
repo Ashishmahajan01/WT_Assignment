@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HW 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        $('#b1').click(function () {
+            let num = $('#i1').val();
+            let from = $('#i2').val();
+            let to = $('#i3').val();
+            let result
+            let str = ""
+            //console.log(from)
+            //console.log(to)
+            for (let i = from; i <= to; i++) {
+                result = num * i
+                str += `<tr > <td>${num} *${i} = </td><td>${result}</td ></tr>`
+                console.log("i", i, "from", from, "to", to)
+            }
+            $('#d1').html(str)
+
+        })
+
+    })
+</script>
+
+<body>
+
+</body>
+<div>
+    <br>
+    <input type="number" id="i1" />
+    <input type="number" id="i2" />
+    <input type="number" id="i3" />
+    <button id="b1">Show Table</button>
+    </br>
+    <table border=1>
+        <thead>
+            <tr>
+                <td>num*x</td>
+                <td>ans</td>
+            </tr>
+        </thead>
+        <tbody id="d1">
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+</html>

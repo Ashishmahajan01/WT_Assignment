@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HW 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#b1").click(() => {
+                let num = $('#i1').val();
+                let temp = 0
+
+                $("#d1").animate({ left: '0px' })
+                var div = $("#d1");
+                for (i = 1; i <= num; i++) {
+                    div.animate({ width: '1000px' }, "slow");
+                    div.animate({ width: '0px' }, "slow");
+                    temp++
+                    if (temp == num) {
+                        alert("click button to do again");
+                    }
+                }
+                // console.log("1")
+
+
+            })
+            // console.log("2")
+
+        })
+
+
+    </script>
+</head>
+
+<body>
+    <div id="d1" style="position:static; border: 20px; width: 20px; height: 20px; background-color: aqua;">
+
+
+    </div>
+    <br>
+    <br>
+    <p>
+        <button id="b1">Start Moving</button>
+        <input type="number" id="i1" placeholder="Enter Loop no" />
+    </p>
+</body>
+
+</html>
