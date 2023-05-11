@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>hw3 Day-8</title>
+    <script src="./JQuery.js"></script>
+    <script>
+        let jobv, datev
+        function validate() {
+            let element = document.getElementById("id1")
+            console.log(element)
+            //let a = element.checkValidity();
+            console.log(element.checkValidity())
+            if (element.checkValidity()) {
+                jobv = true
+                console.log("working")
+            }
+            else {
+                alert("error")
+            }
+
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+    Job:<input type="text" required id="id1" minlength=" 4" maxlength="15" /><br><br>
+    Date:<input type="date" required id="id2" min="2022-01-01" max="2023-12-31" /><br><br>
+    <a href="./welcome.html"><input type="submit" value="submit" onclick="validate()" /></a>
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Day 8 HomeWork1</title>
+    <style>
+        .ancestors * {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        }
+    </style>
+    <script src="./JQuery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".Ancestor").children().children().children().children().css({ "color": "red", "border": "2px solid red" });
+
+        })
+
+    </script>
+
+</head>
+
+<body>
+    <div class="Ancestor">
+        <div id="daddu">
+            This is daddu
+            <div id="baap">
+                this is baap
+                <div id="beta">
+                    this is beta
+                    <div id="chomuu">
+                        this is chomu
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="chacha">
+            this is chacha
+            <div id="cbaap">
+                this is baap
+                <div id="cbeta">
+                    this is beta
+                    <div id="cchomuu">
+                        this is chomu
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

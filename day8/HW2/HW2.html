@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Day 8 HW2</title>
+    <script src="./JQuery.js"></script>
+    <script>
+        function validate_it() {
+            let namev, agev, emailv, addressv
+
+            let n = document.forms['form']['name'].value
+
+            if (n.trim() == "" || n.length < 2 || !isNaN(n)) {
+                alert("name cannot be empty or less than 2 chars")
+                document.forms["form"]["name"].focus()
+                namev = false
+            }
+            else {
+                namev = true
+            }
+
+            let curdate = new Date()   // shows the system date
+            let dob = new Date(document.forms.form.dob.value) //"yyyy-mm-dd"
+            let diff = curdate - dob
+            let age = diff / (1000 * 60 * 60 * 24 * 365)
+            age = parseInt(age)
+
+
+            if (age < 18 || age > 100) {
+                agev = false
+                alert("Age cannot be less than 18 and More Than 100")
+                document.forms["form"]["dob"].focus()
+
+            }
+            else {
+                agev = true
+            }
+
+
+
+            let email = document.forms['form']['email'].value
+            let vemail = email.indexOf('@')
+            let checkstr = email.substring(vemail + 1)
+
+            if (checkstr.indexOf('.') < 0) {
+                alert("Please Enter Proper Email")
+                document.forms["form"]["email"].focus()
+                emailv = false
+            }
+            else {
+                emailv = true
+            }
+
+
+
+            let add = document.forms['form']['address'].value
+            add = add.toLowerCase();
+            console.log(add)
+            const substr = 'pune';
+
+
+            if (add.includes(substr) == false) {
+                alert("Please Enter Proper Address")
+                document.forms["form"]["address"].focus()
+                addressv = false
+            }
+            else {
+                addressv = true
+            }
+
+
+
+            return namev && agev && emailv && addressv
+
+
+        }
+
+    </script>
+</head>
+
+
+<body>
+    <form name="form" onsubmit="return validate_it()" action="./welcome.html">
+        Name: <input type=" text" placeholder="Enter the name" name="name" />
+        <br><br>
+        <!-- Age: <input type="number" placeholder="Enter Age" name="age" />
+        <br><br> -->
+        DOB: <input type="date" name="dob">
+        <br><br>
+        Email: <input type="email" placeholder="Enter Email" name="email">
+        <br><br>
+        Address: <input type="text" placeholder="Enter Address" name="address">
+        <br><br>
+        <input type="submit" value="submit">
+
+
+    </form>
+
+</body>
+
+</html>
