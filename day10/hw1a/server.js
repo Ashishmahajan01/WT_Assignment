@@ -16,9 +16,15 @@ import guestcountrouter from "./guestcountrouter.js"
 app.use("/guestcount", guestcountrouter)
 
 
+import changename from "./ChangeName.js"
+app.use("/ch", changename)
+
+import Delete from "./Delete.js"
+app.use("/del", Delete)
+
 
 app.listen(5755, () => {
-    console.log("Aksh get fucked!!!! on port number 5755")
+    console.log("Akash is running on port number 5755")
 
 })
 
