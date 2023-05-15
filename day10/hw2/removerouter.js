@@ -15,7 +15,7 @@ removerouter.delete("/:Id",(req,res)=>{
             let index = x
             arr.splice(index,1)
             res.send(arr)
-        }
+        } 
     
 }
 })
