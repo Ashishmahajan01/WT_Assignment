@@ -1,0 +1,41 @@
+main{
+    margin:50px;
+    padding:20px
+}
+.op{
+    background:url("../Images/back.gif") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    
+}
+
+#first{
+   margin-left:38%;
+   margin-right: 20px;   
+}
+
+button{    
+    background:url("../Images/button.gif");
+    display: block;
+    height: 212px;  
+    width: 320px;
+    background-repeat: no-repeat;
+}
+
+p{
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
+    color: antiquewhite;
+}
+
+#show{
+    margin: 0 auto;
+    margin-top: 30px;    
+}
+
+.drop{
+    
+    margin-top: 20px;
+}

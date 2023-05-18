@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Day5 Assignments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+    <h1><img src="assignment.svg" alt="" style="height: 70px; position: absolute; left: 10px;" ></h1>
+    <div class="container_main">
+      <div class="container" style="background-color: #F7E1AE;">
+        <h1 id="header1">Returning a Function</h1>
+        <input type="number" id="number1" value="0" style="visibility: visible;"; />
+        <table id="table1" style="visibility: visible;">
+          <tr>
+            <td>
+              <button onclick="doMath(1)" type="button" name="button">Do Square</button>
+            </td>
+            <td>
+              <button onclick="doMath(2)" type="button" name="button">Do Cube</button>
+            </td>
+          </tr>
+        </table>
+        <button type="button" id="button1" style="visibility: hidden; position: absolute;" name="button">Hi This is me</button>
+      </div>
+<!-- ---------------------------------------------------- -->
+      <div class="container" style="background-color: #FFF8D6;">
+        <h1 id="header3">Using Filter function</h1>
+
+          <input style="height: 30px;" type="number" placeholder="Array first Element 1" readonly/>
+          <input style="height: 30px;" type="number" placeholder="Array second Element 2" readonly/>
+          <input style="height: 30px;" type="number" id="array_input" placeholder="Array input 3" />
+
+        <table>
+          <tr>
+            <td>
+              <button onClick="filter_function(1)" class="array[]" type="button" name="button" style="background: 'light blue'">Array Input</button>
+            </td>
+            <td>
+              <button onClick="filter_function(2)" class="array[]" type="button" name="button" style="background: 'light blue'">For Filtered even output</button>
+            </td>
+          </tr>
+        </table>
+        <button id='button3' type="button" name="button" style="font-weight: bold; background-color: #ACB1D6; visibility: hidden; position: absolute; right: 50%; height:40px;"></button>
+        <button id='button2' type="button" name="button" style="font-weight: bold; background-color: #ACB1D6; visibility: hidden; position: absolute; left: 50%; height:40px;"></button>
+      </div>
+
+<!-- ---------------------------------------------------- -->
+
+      <div class="container" style="background-color: #A4D0A4;">
+        <h1 id="header2">Date and Time Assignment</h1>
+        <input type="date" id="input_date"  onchange="printday()">
+        <button id='button5' type="button" name="button" style="font-weight: bold; background-color: #ACB1D6; visibility: hidden; position: absolute;"></button>
+      </div>
+
+<!-- ---------------------------------------------------- -->
+
+      <div class="container" style="background-color: #7C96AB;">
+        <h1 id="header3">Using Class to make array of Object</h1>
+        <input type="input_name" id="person_name" placeholder="Please insert name here" style="margin: 5px;"/>
+        <input type="number" id="person_age" placeholder="Please enter age here" />
+        <button type="button" onclick="person_function()" name="button">Press!!</button>
+        <table id="table2" visibility='hidden'>
+          <tr>
+            <td id="division1"></td>
+            <td id="division2"></td>
+          </tr>
+        </table>
+      </div>
+
+<!-- ---------------------------------------------------- -->
+
+      <div class="container" style="background-color: #B7B7B7;">
+        <div class="first">
+          <h1>Array of objects using Constructor Function</h1>
+          <input type="text" id="person_name1" placeholder="Please insert name here" style="margin: 5px;"/>
+          <input type="number" id="person_age1" placeholder="Please age here" style="margin: 5px;"/>
+          <button type="button" name="button">(+)</button>
+        </div>
+        <div class="second">
+          <h1>Making array of objects using JSON</h1>
+          <input type="text" id="person_name2" placeholder="Please insert name here" style="margin: 5px;"/>
+          <input type="number" id="person_age2" placeholder="Please age here" style="margin: 5px;"/>
+          <button type="button" name="button">(+)</button>
+        </div>
+      </div>
+
+      <div class="container" style="background-color: #E5BEEC;">
+        <div class="first">
+          <h1>Chat Box!</h1>
+          <button id="chat_button" type="button" name="button" style="background: #FF55BB; position: absolute; align: center">Click to Chat</button>
+        </div>
+        <div class="second">
+
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="log.js"></script>
+    </body>
+</html>

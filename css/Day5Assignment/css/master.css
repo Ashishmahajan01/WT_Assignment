@@ -1,0 +1,47 @@
+body{
+  font-family: 'Instrument Serif', serif;
+}
+button{
+  opacity: 0.8;
+  border-radius: 10px;
+  border-style: none;
+  height: 40px;
+  width: fit-content;
+}
+
+input{
+  height: 40px;
+  width: auto;
+  opacity: 0.8;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.container_main{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.first{
+  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.second{
+  flex: 2;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.arrayblock{
+  align-self: center;
+}
